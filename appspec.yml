@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/workspace/Prod_kadmin_pipeline
+permissions:
+  - object: /home/ubuntu/workspace/Prod_kadmin_pipeline/install.sh
+    pattern: 777
+hooks:
+  AfterInstall:
+    - location: install.sh
+      timeout: 1200
+      runas: root
