@@ -5,7 +5,7 @@ files:
     destination: /home/ubuntu/workspace/Prod_kadmin_pipeline
 permissions:
   - object: /home/ubuntu/workspace/Prod_kadmin_pipeline/install.sh
-    pattern: 777
+    pattern: 755
 hooks:
   AfterInstall:
     - location: install.sh
